@@ -1,0 +1,54 @@
+package com.profitsoft.lotrstat;
+
+import com.profitsoft.lotrstat.model.ArtifactAttribute;
+import com.profitsoft.lotrstat.statistics.ArtifactStatsService;
+import com.profitsoft.lotrstat.xml.StatisticsXmlWriter;
+
+import java.io.File;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
+
+
+public class Main {
+    public static void main(String[] args) throws IOException, InterruptedException {
+        if (args.length < 2) {
+            System.err.println("Usage: java -jar app.jar <folderPath> <attribute>");
+            System.exit(1);
+        }
+
+        Path path = Paths.get(args[0]);
+        ArtifactAttribute attribute = ArtifactAttribute.fromString(args[1]);
+        List<File> files;
+        try (Stream<Path> paths = Files.walk(path)) {
+            files = paths
+                    .filter(Files::isRegularFile)
+                    .toList()
+                    .stream()
+                    .map(Path::toFile)
+                    .toList();
+        }
+
+        ArtifactStatsService service = new ArtifactStatsService();
+
+        service.processAllFilesInFolder(path, attribute);
+
+        Path xmlOutput = path.resolve("statistics_by_" + attribute.getJsonFieldName() + ".xml");
+        StatisticsXmlWriter xmlWriter = new StatisticsXmlWriter();
+        try {
+            xmlWriter.write(xmlOutput, attribute, service.getStats());
+            System.out.println("XML written to: " + xmlOutput.toAbsolutePath());
+        } catch (IOException e) {
+            System.err.println("Failed to write XML: " + e.getMessage());
+        }
+
+
+
+
+
+    }
+}
