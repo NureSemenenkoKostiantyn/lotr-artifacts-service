@@ -14,7 +14,6 @@ import java.util.stream.Stream;
 
 public class ArtifactStatsService {
 
-    // value -> count (e.g. "Gondor" -> 10)
     private final ConcurrentMap<String, Long> stats = new ConcurrentHashMap<>();
 
     private final JsonFactory jsonFactory = new JsonFactory();
@@ -23,12 +22,6 @@ public class ArtifactStatsService {
         return stats;
     }
 
-    /**
-     * Parse ONE file using Jackson Streaming API and update statistics
-     * for the given attribute.
-     *
-     * Assumes each file contains a single JSON object representing Artifact.
-     */
     public void processSingleFile(Path file, ArtifactAttribute attribute) {
         System.out.println("Processing Single File");
         System.out.println(file);
