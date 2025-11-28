@@ -8,23 +8,21 @@ import com.profitsoft.lotrstat.model.ArtifactAttribute;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Locale;
 import java.util.Map;
 import java.util.concurrent.*;
 import java.util.stream.Stream;
 
 public class ArtifactStatsService {
 
-    private final ConcurrentMap<String, Long> stats = new ConcurrentHashMap<>();
 
     private final JsonFactory jsonFactory = new JsonFactory();
 
-    public Map<String, Long> getStats() {
-        return stats;
-    }
+    public Map<String, Long> processSingleFile(Path file, ArtifactAttribute attribute) throws IOException {
+        Map<String, Long> result = new HashMap<>();
 
-    public void processSingleFile(Path file, ArtifactAttribute attribute) {
-        System.out.println("Processing Single File");
-        System.out.println(file);
         try (JsonParser parser = jsonFactory.createParser(file.toFile())) {
 
             String currentField = null;
@@ -43,49 +41,72 @@ public class ArtifactStatsService {
                     String rawValue = parser.getValueAsString();
 
                     if (rawValue == null || rawValue.isBlank()) {
-                        return;
+                        continue;
                     }
 
                     if (!attribute.isMultiValued()) {
-                        stats.merge(rawValue.trim(), 1L, Long::sum);
+                        result.merge(rawValue.trim(), 1L, Long::sum);
                     } else {
                         String[] values = rawValue.split(",");
 
                         for (String v : values) {
                             String cleaned = v.trim();
                             if (!cleaned.isEmpty()) {
-                                stats.merge(cleaned, 1L, Long::sum);
+                                result.merge(cleaned, 1L, Long::sum);
                             }
                         }
                     }
                 }
             }
-
-        } catch (IOException e) {
-            System.err.println("Failed to process file " + file + ": " + e.getMessage());
         }
+        return result;
     }
 
-    public void processAllFilesInFolder(Path folder, ArtifactAttribute attribute)
+    public Map<String, Long> processAllFilesInFolder(Path folder, ArtifactAttribute attribute)
             throws IOException, InterruptedException {
 
-        int threads = Runtime.getRuntime().availableProcessors();
-        boolean finished;
-        try (ExecutorService executor = Executors.newFixedThreadPool(threads)) {
+        Map<String, Long> result = new HashMap<>();
 
-            try (Stream<Path> files = Files.list(folder)) {
-                files
-                        .filter(p -> p.toString().toLowerCase().endsWith(".json"))
-                        .forEach(path -> executor.submit(() -> processSingleFile(path, attribute)));
+        if (!Files.isDirectory(folder)) {
+            throw new IllegalArgumentException("Not a directory: " + folder);
+        }
+
+        List<Path> jsonFiles;
+        try (Stream<Path> stream = Files.list(folder)) {
+            jsonFiles = stream
+                    .filter(Files::isRegularFile)
+                    .filter(p -> p.getFileName().toString()
+                            .toLowerCase(Locale.ROOT)
+                            .endsWith(".json"))
+                    .toList();
+        }
+
+        if (jsonFiles.isEmpty()) {
+            System.out.println("No JSON files in " + folder);
+            return result;
+        }
+
+
+
+        try (var executor = Executors.newVirtualThreadPerTaskExecutor()) {
+
+            List<Callable<Map<String, Long>>> tasks = jsonFiles.stream()
+                    .map(path -> (Callable<Map<String, Long>>) () -> processSingleFile(path, attribute))
+                    .toList();
+
+            var futures = executor.invokeAll(tasks);
+
+            for (Future<Map<String, Long>> future : futures) {
+                try {
+                    Map<String, Long> fileStats = future.get();
+                    fileStats.forEach((key, value) -> result.merge(key, value,  Long::sum));
+                } catch (ExecutionException e) {
+                    System.err.println("Error processing file: " + e.getCause());
+                }
             }
 
-            executor.shutdown();
-            finished = executor.awaitTermination(10, TimeUnit.MINUTES);
         }
-        if (!finished) {
-            System.err.println("Timeout while waiting for tasks to finish");
-        }
-        System.out.println(getStats());
 
+        return result;
     }
 }

@@ -7,6 +7,7 @@ import com.profitsoft.lotrstat.xml.StatisticsXmlWriter;
 import java.io.IOException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.Map;
 
 
 public class Main {
@@ -20,21 +21,15 @@ public class Main {
         ArtifactAttribute attribute = ArtifactAttribute.fromString(args[1]);
 
         ArtifactStatsService service = new ArtifactStatsService();
-
-        service.processAllFilesInFolder(path, attribute);
+        Map<String, Long> stats = service.processAllFilesInFolder(path, attribute);
 
         Path xmlOutput = path.resolve("statistics_by_" + attribute.getJsonFieldName() + ".xml");
         StatisticsXmlWriter xmlWriter = new StatisticsXmlWriter();
         try {
-            xmlWriter.write(xmlOutput, attribute, service.getStats());
+            xmlWriter.write(xmlOutput, attribute, stats);
             System.out.println("XML written to: " + xmlOutput.toAbsolutePath());
         } catch (IOException e) {
             System.err.println("Failed to write XML: " + e.getMessage());
         }
-
-
-
-
-
     }
 }
