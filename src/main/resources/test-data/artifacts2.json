@@ -1,0 +1,978 @@
+[
+  {
+    "name": "The One Ring",
+    "creator": "Sauron",
+    "origin": "Mount Doom",
+    "tags": "ring,evil,legendary",
+    "year_created": 1600,
+    "power_level": 100
+  },
+  {
+    "name": "Mithril Chain (Blessed)",
+    "creator": "Elrond",
+    "origin": "Angmar",
+    "tags": "mithril,light,legendary",
+    "year_created": 2516,
+    "power_level": 37
+  },
+  {
+    "name": "Wizard Staff Fragment of Power",
+    "creator": "Fëanor",
+    "origin": "Valinor",
+    "tags": "mithril,light,legendary",
+    "year_created": 2148,
+    "power_level": 33
+  },
+  {
+    "name": "Dwarven War-Helm",
+    "creator": "Dwarves of Erebor",
+    "origin": "Angmar",
+    "tags": "orcish,brutal,iron",
+    "year_created": 2224,
+    "power_level": 94
+  },
+  {
+    "name": "Wizard Staff Fragment of the West",
+    "creator": "Aulë",
+    "origin": "Gondor",
+    "tags": "orcish,brutal,iron",
+    "year_created": 130,
+    "power_level": 83
+  },
+  {
+    "name": "Elven Circlet of Starlight of Light",
+    "creator": "Elves of Lórien",
+    "origin": "Erebor",
+    "tags": "elven,light,magic",
+    "year_created": 1572,
+    "power_level": 94
+  },
+  {
+    "name": "Rune Stone of Power of Light",
+    "creator": "Elrond",
+    "origin": "Gondor",
+    "tags": "orcish,brutal,iron",
+    "year_created": 2364,
+    "power_level": 22
+  },
+  {
+    "name": "Wizard Staff Fragment (Ancient)",
+    "creator": "Dwarves of Erebor",
+    "origin": "Angmar",
+    "tags": "numenorean,rare,ancient",
+    "year_created": 1218,
+    "power_level": 41
+  },
+  {
+    "name": "Mithril Chain of the North",
+    "creator": "Celebrimbor",
+    "origin": "Angmar",
+    "tags": "orcish,brutal,iron",
+    "year_created": 1305,
+    "power_level": 58
+  },
+  {
+    "name": "Ancient Bow of the West of Power",
+    "creator": "Aulë",
+    "origin": "Valinor",
+    "tags": "mithril,light,legendary",
+    "year_created": 242,
+    "power_level": 27
+  },
+  {
+    "name": "Elven Circlet of Starlight (Blessed)",
+    "creator": "Men of Númenor",
+    "origin": "Mordor",
+    "tags": "blade,sharp,ancient",
+    "year_created": 409,
+    "power_level": 70
+  },
+  {
+    "name": "Elven Circlet of Starlight of the North",
+    "creator": "Aulë",
+    "origin": "Rivendell",
+    "tags": "dwarven,steel,heavy",
+    "year_created": 514,
+    "power_level": 43
+  },
+  {
+    "name": "Wizard Staff Fragment (Reforged)",
+    "creator": "Elves of Lórien",
+    "origin": "Angmar",
+    "tags": "numenorean,rare,ancient",
+    "year_created": 588,
+    "power_level": 34
+  },
+  {
+    "name": "Orcish War Axe of Light",
+    "creator": "Elrond",
+    "origin": "Rivendell",
+    "tags": "mithril,light,legendary",
+    "year_created": 2640,
+    "power_level": 43
+  },
+  {
+    "name": "Orcish War Axe",
+    "creator": "Aulë",
+    "origin": "Rivendell",
+    "tags": "orcish,brutal,iron",
+    "year_created": 2555,
+    "power_level": 17
+  },
+  {
+    "name": "Dwarven War-Helm of Power",
+    "creator": "Men of Númenor",
+    "origin": "Lothlórien",
+    "tags": "orcish,brutal,iron",
+    "year_created": 1365,
+    "power_level": 65
+  },
+  {
+    "name": "Gondorian Shield of the South",
+    "creator": "Celebrimbor",
+    "origin": "Erebor",
+    "tags": "elven,light,magic",
+    "year_created": 693,
+    "power_level": 90
+  },
+  {
+    "name": "Lost Ring of Arnor of Shadows",
+    "creator": "Fëanor",
+    "origin": "Mordor",
+    "tags": "ring,magic,hidden",
+    "year_created": 1123,
+    "power_level": 29
+  },
+  {
+    "name": "Ancient Bow of the West of the East",
+    "creator": "Aulë",
+    "origin": "Gondor",
+    "tags": "elven,light,magic",
+    "year_created": 183,
+    "power_level": 82
+  },
+  {
+    "name": "Orcish War Axe (Reforged)",
+    "creator": "Elves of Lórien",
+    "origin": "Erebor",
+    "tags": "dwarven,steel,heavy",
+    "year_created": 368,
+    "power_level": 15
+  },
+  {
+    "name": "Elven Amulet of Dawn of the West",
+    "creator": "Fëanor",
+    "origin": "Valinor",
+    "tags": "elven,light,magic",
+    "year_created": 1947,
+    "power_level": 82
+  },
+  {
+    "name": "Elven Amulet of Dawn (Ancient)",
+    "creator": "Sauron",
+    "origin": "Mordor",
+    "tags": "mithril,light,legendary",
+    "year_created": 1094,
+    "power_level": 63
+  },
+  {
+    "name": "Elven Amulet of Dawn of Power",
+    "creator": "Aulë",
+    "origin": "Lothlórien",
+    "tags": "dwarven,steel,heavy",
+    "year_created": 957,
+    "power_level": 72
+  },
+  {
+    "name": "Rune Stone of Power",
+    "creator": "Elves of Lórien",
+    "origin": "Erebor",
+    "tags": "numenorean,rare,ancient",
+    "year_created": 437,
+    "power_level": 96
+  },
+  {
+    "name": "Orcish War Axe of the East",
+    "creator": "Men of Númenor",
+    "origin": "Númenor",
+    "tags": "numenorean,rare,ancient",
+    "year_created": 2976,
+    "power_level": 47
+  },
+  {
+    "name": "Rune Stone of Power of Power",
+    "creator": "Men of Númenor",
+    "origin": "Gondor",
+    "tags": "ring,magic,hidden",
+    "year_created": 2123,
+    "power_level": 16
+  },
+  {
+    "name": "Dwarven War-Helm (Ancient)",
+    "creator": "Sauron",
+    "origin": "Angmar",
+    "tags": "ring,magic,hidden",
+    "year_created": 1153,
+    "power_level": 47
+  },
+  {
+    "name": "Numenorean Blade of Shadows",
+    "creator": "Sauron",
+    "origin": "Rivendell",
+    "tags": "dwarven,steel,heavy",
+    "year_created": 66,
+    "power_level": 52
+  },
+  {
+    "name": "Mithril Chain of Shadows",
+    "creator": "Celebrimbor",
+    "origin": "Lothlórien",
+    "tags": "orcish,brutal,iron",
+    "year_created": 1815,
+    "power_level": 32
+  },
+  {
+    "name": "Dwarven War-Helm of the West",
+    "creator": "Elrond",
+    "origin": "Mordor",
+    "tags": "dwarven,steel,heavy",
+    "year_created": 1861,
+    "power_level": 65
+  },
+  {
+    "name": "Orcish War Axe (Blessed)",
+    "creator": "Dwarves of Erebor",
+    "origin": "Gondor",
+    "tags": "elven,light,magic",
+    "year_created": 205,
+    "power_level": 100
+  },
+  {
+    "name": "Gondorian Shield of Power",
+    "creator": "Men of Númenor",
+    "origin": "Númenor",
+    "tags": "numenorean,rare,ancient",
+    "year_created": 578,
+    "power_level": 79
+  },
+  {
+    "name": "Wizard Staff Fragment",
+    "creator": "Celebrimbor",
+    "origin": "Valinor",
+    "tags": "blade,sharp,ancient",
+    "year_created": 2187,
+    "power_level": 64
+  },
+  {
+    "name": "Elven Amulet of Dawn",
+    "creator": "Dwarves of Erebor",
+    "origin": "Erebor",
+    "tags": "numenorean,rare,ancient",
+    "year_created": 130,
+    "power_level": 73
+  },
+  {
+    "name": "Lost Ring of Arnor (Blessed)",
+    "creator": "Elves of Lórien",
+    "origin": "Gondor",
+    "tags": "ring,magic,hidden",
+    "year_created": 1694,
+    "power_level": 72
+  },
+  {
+    "name": "Gondorian Shield (Blessed)",
+    "creator": "Aulë",
+    "origin": "Númenor",
+    "tags": "blade,sharp,ancient",
+    "year_created": 716,
+    "power_level": 39
+  },
+  {
+    "name": "Elven Circlet of Starlight",
+    "creator": "Dwarves of Erebor",
+    "origin": "Gondor",
+    "tags": "ring,magic,hidden",
+    "year_created": 2502,
+    "power_level": 96
+  },
+  {
+    "name": "Orcish War Axe of Power",
+    "creator": "Celebrimbor",
+    "origin": "Rivendell",
+    "tags": "dwarven,steel,heavy",
+    "year_created": 1703,
+    "power_level": 91
+  },
+  {
+    "name": "Numenorean Blade (Reforged)",
+    "creator": "Celebrimbor",
+    "origin": "Númenor",
+    "tags": "mithril,light,legendary",
+    "year_created": 1555,
+    "power_level": 20
+  },
+  {
+    "name": "Rune Stone of Power (Reforged)",
+    "creator": "Men of Númenor",
+    "origin": "Lothlórien",
+    "tags": "orcish,brutal,iron",
+    "year_created": 2264,
+    "power_level": 63
+  },
+  {
+    "name": "Numenorean Blade of the North",
+    "creator": "Aulë",
+    "origin": "Valinor",
+    "tags": "elven,light,magic",
+    "year_created": 323,
+    "power_level": 95
+  },
+  {
+    "name": "Elven Circlet of Starlight (Ancient)",
+    "creator": "Celebrimbor",
+    "origin": "Valinor",
+    "tags": "mithril,light,legendary",
+    "year_created": 2249,
+    "power_level": 65
+  },
+  {
+    "name": "Numenorean Blade of Power",
+    "creator": "Elves of Lórien",
+    "origin": "Erebor",
+    "tags": "ring,magic,hidden",
+    "year_created": 2378,
+    "power_level": 39
+  },
+  {
+    "name": "Numenorean Blade of the West",
+    "creator": "Men of Númenor",
+    "origin": "Mordor",
+    "tags": "numenorean,rare,ancient",
+    "year_created": 454,
+    "power_level": 45
+  },
+  {
+    "name": "Elven Amulet of Dawn (Reforged)",
+    "creator": "Aulë",
+    "origin": "Gondor",
+    "tags": "numenorean,rare,ancient",
+    "year_created": 2107,
+    "power_level": 62
+  },
+  {
+    "name": "Ancient Bow of the West of the West",
+    "creator": "Elves of Lórien",
+    "origin": "Númenor",
+    "tags": "numenorean,rare,ancient",
+    "year_created": 1056,
+    "power_level": 60
+  },
+  {
+    "name": "Dwarven War-Helm of the South",
+    "creator": "Celebrimbor",
+    "origin": "Erebor",
+    "tags": "elven,light,magic",
+    "year_created": 1051,
+    "power_level": 94
+  },
+  {
+    "name": "Numenorean Blade of the South",
+    "creator": "Elrond",
+    "origin": "Númenor",
+    "tags": "numenorean,rare,ancient",
+    "year_created": 452,
+    "power_level": 25
+  },
+  {
+    "name": "Mithril Chain (Reforged)",
+    "creator": "Fëanor",
+    "origin": "Lothlórien",
+    "tags": "mithril,light,legendary",
+    "year_created": 1188,
+    "power_level": 53
+  },
+  {
+    "name": "Wizard Staff Fragment of Shadows",
+    "creator": "Elves of Lórien",
+    "origin": "Mordor",
+    "tags": "blade,sharp,ancient",
+    "year_created": 1104,
+    "power_level": 50
+  },
+  {
+    "name": "Ancient Bow of the West of the North",
+    "creator": "Dwarves of Erebor",
+    "origin": "Lothlórien",
+    "tags": "dwarven,steel,heavy",
+    "year_created": 1935,
+    "power_level": 18
+  },
+  {
+    "name": "Ancient Bow of the West",
+    "creator": "Fëanor",
+    "origin": "Rivendell",
+    "tags": "numenorean,rare,ancient",
+    "year_created": 2912,
+    "power_level": 30
+  },
+  {
+    "name": "Wizard Staff Fragment of the North",
+    "creator": "Aulë",
+    "origin": "Rivendell",
+    "tags": "numenorean,rare,ancient",
+    "year_created": 605,
+    "power_level": 93
+  },
+  {
+    "name": "Elven Amulet of Dawn of Shadows",
+    "creator": "Celebrimbor",
+    "origin": "Lothlórien",
+    "tags": "mithril,light,legendary",
+    "year_created": 2959,
+    "power_level": 74
+  },
+  {
+    "name": "Rune Stone of Power of Shadows",
+    "creator": "Sauron",
+    "origin": "Mordor",
+    "tags": "ring,magic,hidden",
+    "year_created": 2870,
+    "power_level": 61
+  },
+  {
+    "name": "Elven Circlet of Starlight of the West",
+    "creator": "Elves of Lórien",
+    "origin": "Mordor",
+    "tags": "elven,light,magic",
+    "year_created": 2916,
+    "power_level": 32
+  },
+  {
+    "name": "Orcish War Axe of the South",
+    "creator": "Elves of Lórien",
+    "origin": "Rivendell",
+    "tags": "orcish,brutal,iron",
+    "year_created": 2948,
+    "power_level": 96
+  },
+  {
+    "name": "Elven Amulet of Dawn of the East",
+    "creator": "Men of Númenor",
+    "origin": "Lothlórien",
+    "tags": "orcish,brutal,iron",
+    "year_created": 2157,
+    "power_level": 34
+  },
+  {
+    "name": "Ancient Bow of the West of Shadows",
+    "creator": "Dwarves of Erebor",
+    "origin": "Angmar",
+    "tags": "blade,sharp,ancient",
+    "year_created": 479,
+    "power_level": 64
+  },
+  {
+    "name": "Mithril Chain of Power",
+    "creator": "Elves of Lórien",
+    "origin": "Númenor",
+    "tags": "numenorean,rare,ancient",
+    "year_created": 2336,
+    "power_level": 92
+  },
+  {
+    "name": "Orcish War Axe of the West",
+    "creator": "Celebrimbor",
+    "origin": "Valinor",
+    "tags": "orcish,brutal,iron",
+    "year_created": 1442,
+    "power_level": 29
+  },
+  {
+    "name": "Elven Circlet of Starlight (Reforged)",
+    "creator": "Dwarves of Erebor",
+    "origin": "Valinor",
+    "tags": "numenorean,rare,ancient",
+    "year_created": 737,
+    "power_level": 37
+  },
+  {
+    "name": "Rune Stone of Power of the South",
+    "creator": "Elves of Lórien",
+    "origin": "Rivendell",
+    "tags": "numenorean,rare,ancient",
+    "year_created": 2411,
+    "power_level": 73
+  },
+  {
+    "name": "Elven Circlet of Starlight of Power",
+    "creator": "Celebrimbor",
+    "origin": "Angmar",
+    "tags": "mithril,light,legendary",
+    "year_created": 2097,
+    "power_level": 67
+  },
+  {
+    "name": "Gondorian Shield",
+    "creator": "Elves of Lórien",
+    "origin": "Angmar",
+    "tags": "orcish,brutal,iron",
+    "year_created": 1630,
+    "power_level": 90
+  },
+  {
+    "name": "Elven Amulet of Dawn of the South",
+    "creator": "Aulë",
+    "origin": "Valinor",
+    "tags": "ring,magic,hidden",
+    "year_created": 1793,
+    "power_level": 27
+  },
+  {
+    "name": "Numenorean Blade of the East",
+    "creator": "Men of Númenor",
+    "origin": "Gondor",
+    "tags": "ring,magic,hidden",
+    "year_created": 147,
+    "power_level": 73
+  },
+  {
+    "name": "Wizard Staff Fragment of Light",
+    "creator": "Fëanor",
+    "origin": "Rivendell",
+    "tags": "mithril,light,legendary",
+    "year_created": 388,
+    "power_level": 23
+  },
+  {
+    "name": "Lost Ring of Arnor of Light",
+    "creator": "Celebrimbor",
+    "origin": "Lothlórien",
+    "tags": "numenorean,rare,ancient",
+    "year_created": 2935,
+    "power_level": 73
+  },
+  {
+    "name": "Dwarven War-Helm of Light",
+    "creator": "Elrond",
+    "origin": "Mordor",
+    "tags": "orcish,brutal,iron",
+    "year_created": 886,
+    "power_level": 11
+  },
+  {
+    "name": "Lost Ring of Arnor of the West",
+    "creator": "Men of Númenor",
+    "origin": "Angmar",
+    "tags": "dwarven,steel,heavy",
+    "year_created": 1475,
+    "power_level": 23
+  },
+  {
+    "name": "Ancient Bow of the West (Blessed)",
+    "creator": "Men of Númenor",
+    "origin": "Lothlórien",
+    "tags": "orcish,brutal,iron",
+    "year_created": 1768,
+    "power_level": 33
+  },
+  {
+    "name": "Mithril Chain of Light",
+    "creator": "Elves of Lórien",
+    "origin": "Rivendell",
+    "tags": "dwarven,steel,heavy",
+    "year_created": 730,
+    "power_level": 34
+  },
+  {
+    "name": "Mithril Chain of the South",
+    "creator": "Fëanor",
+    "origin": "Lothlórien",
+    "tags": "dwarven,steel,heavy",
+    "year_created": 86,
+    "power_level": 34
+  },
+  {
+    "name": "Mithril Chain of the East",
+    "creator": "Elrond",
+    "origin": "Valinor",
+    "tags": "dwarven,steel,heavy",
+    "year_created": 1271,
+    "power_level": 38
+  },
+  {
+    "name": "Mithril Chain of the West",
+    "creator": "Sauron",
+    "origin": "Rivendell",
+    "tags": "numenorean,rare,ancient",
+    "year_created": 2045,
+    "power_level": 48
+  },
+  {
+    "name": "Gondorian Shield (Ancient)",
+    "creator": "Celebrimbor",
+    "origin": "Rivendell",
+    "tags": "dwarven,steel,heavy",
+    "year_created": 67,
+    "power_level": 13
+  },
+  {
+    "name": "Dwarven War-Helm of the East",
+    "creator": "Aulë",
+    "origin": "Mordor",
+    "tags": "dwarven,steel,heavy",
+    "year_created": 492,
+    "power_level": 58
+  },
+  {
+    "name": "Mithril Chain (Ancient)",
+    "creator": "Fëanor",
+    "origin": "Númenor",
+    "tags": "elven,light,magic",
+    "year_created": 2288,
+    "power_level": 25
+  },
+  {
+    "name": "Wizard Staff Fragment (Blessed)",
+    "creator": "Elrond",
+    "origin": "Mordor",
+    "tags": "dwarven,steel,heavy",
+    "year_created": 1303,
+    "power_level": 46
+  },
+  {
+    "name": "Wizard Staff Fragment of the East",
+    "creator": "Fëanor",
+    "origin": "Rivendell",
+    "tags": "ring,magic,hidden",
+    "year_created": 1031,
+    "power_level": 24
+  },
+  {
+    "name": "Ancient Bow of the West of Light",
+    "creator": "Aulë",
+    "origin": "Rivendell",
+    "tags": "elven,light,magic",
+    "year_created": 2540,
+    "power_level": 14
+  },
+  {
+    "name": "Lost Ring of Arnor of the North",
+    "creator": "Celebrimbor",
+    "origin": "Angmar",
+    "tags": "elven,light,magic",
+    "year_created": 1291,
+    "power_level": 73
+  },
+  {
+    "name": "Elven Amulet of Dawn of Light",
+    "creator": "Men of Númenor",
+    "origin": "Lothlórien",
+    "tags": "elven,light,magic",
+    "year_created": 2988,
+    "power_level": 44
+  },
+  {
+    "name": "Rune Stone of Power (Blessed)",
+    "creator": "Dwarves of Erebor",
+    "origin": "Mordor",
+    "tags": "mithril,light,legendary",
+    "year_created": 1610,
+    "power_level": 91
+  },
+  {
+    "name": "Ancient Bow of the West (Ancient)",
+    "creator": "Dwarves of Erebor",
+    "origin": "Númenor",
+    "tags": "orcish,brutal,iron",
+    "year_created": 647,
+    "power_level": 23
+  },
+  {
+    "name": "Numenorean Blade of Light",
+    "creator": "Sauron",
+    "origin": "Númenor",
+    "tags": "ring,magic,hidden",
+    "year_created": 2291,
+    "power_level": 14
+  },
+  {
+    "name": "Gondorian Shield (Reforged)",
+    "creator": "Dwarves of Erebor",
+    "origin": "Lothlórien",
+    "tags": "numenorean,rare,ancient",
+    "year_created": 2556,
+    "power_level": 57
+  },
+  {
+    "name": "Elven Amulet of Dawn (Blessed)",
+    "creator": "Fëanor",
+    "origin": "Valinor",
+    "tags": "ring,magic,hidden",
+    "year_created": 2105,
+    "power_level": 53
+  },
+  {
+    "name": "Lost Ring of Arnor of the South",
+    "creator": "Elrond",
+    "origin": "Rivendell",
+    "tags": "blade,sharp,ancient",
+    "year_created": 2979,
+    "power_level": 41
+  },
+  {
+    "name": "Lost Ring of Arnor",
+    "creator": "Elves of Lórien",
+    "origin": "Erebor",
+    "tags": "blade,sharp,ancient",
+    "year_created": 1518,
+    "power_level": 91
+  },
+  {
+    "name": "Lost Ring of Arnor of Power",
+    "creator": "Elves of Lórien",
+    "origin": "Gondor",
+    "tags": "mithril,light,legendary",
+    "year_created": 114,
+    "power_level": 80
+  },
+  {
+    "name": "Numenorean Blade (Ancient)",
+    "creator": "Celebrimbor",
+    "origin": "Mordor",
+    "tags": "ring,magic,hidden",
+    "year_created": 1091,
+    "power_level": 68
+  },
+  {
+    "name": "Rune Stone of Power (Ancient)",
+    "creator": "Fëanor",
+    "origin": "Lothlórien",
+    "tags": "ring,magic,hidden",
+    "year_created": 1208,
+    "power_level": 47
+  },
+  {
+    "name": "Dwarven War-Helm (Blessed)",
+    "creator": "Sauron",
+    "origin": "Lothlórien",
+    "tags": "numenorean,rare,ancient",
+    "year_created": 205,
+    "power_level": 60
+  },
+  {
+    "name": "Dwarven War-Helm of the North",
+    "creator": "Aulë",
+    "origin": "Númenor",
+    "tags": "blade,sharp,ancient",
+    "year_created": 2984,
+    "power_level": 49
+  },
+  {
+    "name": "Elven Amulet of Dawn of the North",
+    "creator": "Aulë",
+    "origin": "Angmar",
+    "tags": "orcish,brutal,iron",
+    "year_created": 818,
+    "power_level": 84
+  },
+  {
+    "name": "Rune Stone of Power of the East",
+    "creator": "Celebrimbor",
+    "origin": "Erebor",
+    "tags": "blade,sharp,ancient",
+    "year_created": 2569,
+    "power_level": 37
+  },
+  {
+    "name": "Numenorean Blade",
+    "creator": "Elrond",
+    "origin": "Valinor",
+    "tags": "dwarven,steel,heavy",
+    "year_created": 836,
+    "power_level": 88
+  },
+  {
+    "name": "Dwarven War-Helm (Reforged)",
+    "creator": "Dwarves of Erebor",
+    "origin": "Rivendell",
+    "tags": "elven,light,magic",
+    "year_created": 2248,
+    "power_level": 39
+  },
+  {
+    "name": "Gondorian Shield of the East",
+    "creator": "Elrond",
+    "origin": "Lothlórien",
+    "tags": "orcish,brutal,iron",
+    "year_created": 926,
+    "power_level": 40
+  },
+  {
+    "name": "Ancient Bow of the West (Reforged)",
+    "creator": "Celebrimbor",
+    "origin": "Rivendell",
+    "tags": "dwarven,steel,heavy",
+    "year_created": 618,
+    "power_level": 66
+  },
+  {
+    "name": "Elven Circlet of Starlight of the East",
+    "creator": "Fëanor",
+    "origin": "Númenor",
+    "tags": "mithril,light,legendary",
+    "year_created": 1112,
+    "power_level": 41
+  },
+  {
+    "name": "Lost Ring of Arnor of the East",
+    "creator": "Celebrimbor",
+    "origin": "Gondor",
+    "tags": "mithril,light,legendary",
+    "year_created": 492,
+    "power_level": 68
+  },
+  {
+    "name": "Rune Stone of Power of the West",
+    "creator": "Fëanor",
+    "origin": "Númenor",
+    "tags": "dwarven,steel,heavy",
+    "year_created": 1419,
+    "power_level": 33
+  },
+  {
+    "name": "Gondorian Shield of Shadows",
+    "creator": "Fëanor",
+    "origin": "Erebor",
+    "tags": "orcish,brutal,iron",
+    "year_created": 171,
+    "power_level": 65
+  },
+  {
+    "name": "Orcish War Axe of the North",
+    "creator": "Elrond",
+    "origin": "Valinor",
+    "tags": "elven,light,magic",
+    "year_created": 1345,
+    "power_level": 72
+  },
+  {
+    "name": "Gondorian Shield of the West",
+    "creator": "Celebrimbor",
+    "origin": "Gondor",
+    "tags": "elven,light,magic",
+    "year_created": 294,
+    "power_level": 86
+  },
+  {
+    "name": "Gondorian Shield of Light",
+    "creator": "Elrond",
+    "origin": "Gondor",
+    "tags": "orcish,brutal,iron",
+    "year_created": 2491,
+    "power_level": 41
+  },
+  {
+    "name": "Elven Circlet of Starlight of the South",
+    "creator": "Aulë",
+    "origin": "Angmar",
+    "tags": "elven,light,magic",
+    "year_created": 1020,
+    "power_level": 64
+  },
+  {
+    "name": "Lost Ring of Arnor (Ancient)",
+    "creator": "Elrond",
+    "origin": "Lothlórien",
+    "tags": "numenorean,rare,ancient",
+    "year_created": 1224,
+    "power_level": 85
+  },
+  {
+    "name": "Wizard Staff Fragment of the South",
+    "creator": "Fëanor",
+    "origin": "Númenor",
+    "tags": "elven,light,magic",
+    "year_created": 755,
+    "power_level": 86
+  },
+  {
+    "name": "Orcish War Axe (Ancient)",
+    "creator": "Aulë",
+    "origin": "Angmar",
+    "tags": "numenorean,rare,ancient",
+    "year_created": 2972,
+    "power_level": 62
+  },
+  {
+    "name": "Dwarven War-Helm of Shadows",
+    "creator": "Dwarves of Erebor",
+    "origin": "Erebor",
+    "tags": "dwarven,steel,heavy",
+    "year_created": 349,
+    "power_level": 71
+  },
+  {
+    "name": "Mithril Chain",
+    "creator": "Fëanor",
+    "origin": "Angmar",
+    "tags": "ring,magic,hidden",
+    "year_created": 1946,
+    "power_level": 26
+  },
+  {
+    "name": "Numenorean Blade (Blessed)",
+    "creator": "Elves of Lórien",
+    "origin": "Mordor",
+    "tags": "orcish,brutal,iron",
+    "year_created": 2868,
+    "power_level": 71
+  },
+  {
+    "name": "Lost Ring of Arnor (Reforged)",
+    "creator": "Celebrimbor",
+    "origin": "Númenor",
+    "tags": "mithril,light,legendary",
+    "year_created": 184,
+    "power_level": 95
+  },
+  {
+    "name": "Gondorian Shield of the North",
+    "creator": "Aulë",
+    "origin": "Mordor",
+    "tags": "orcish,brutal,iron",
+    "year_created": 1131,
+    "power_level": 22
+  },
+  {
+    "name": "Elven Circlet of Starlight of Shadows",
+    "creator": "Elrond",
+    "origin": "Angmar",
+    "tags": "mithril,light,legendary",
+    "year_created": 813,
+    "power_level": 67
+  },
+  {
+    "name": "Rune Stone of Power of the North",
+    "creator": "Sauron",
+    "origin": "Númenor",
+    "tags": "dwarven,steel,heavy",
+    "year_created": 664,
+    "power_level": 99
+  },
+  {
+    "name": "Ancient Bow of the West of the South",
+    "creator": "Fëanor",
+    "origin": "Númenor",
+    "tags": "blade,sharp,ancient",
+    "year_created": 1228,
+    "power_level": 39
+  },
+  {
+    "name": "Orcish War Axe of Shadows",
+    "creator": "Dwarves of Erebor",
+    "origin": "Erebor",
+    "tags": "dwarven,steel,heavy",
+    "year_created": 2179,
+    "power_level": 19
+  }
+]

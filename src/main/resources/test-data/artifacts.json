@@ -1,0 +1,82 @@
+[
+  {
+    "name": "The One Ring",
+    "creator": "Sauron",
+    "origin": "Mount Doom",
+    "tags": "ring,evil,legendary",
+    "year_created": 1600,
+    "power_level": 100
+  },
+  {
+    "name": "Narsil",
+    "creator": "Telchar of Nogrod",
+    "origin": "Nogrod",
+    "tags": "sword,dwarf-forged,legendary",
+    "year_created": 450,
+    "power_level": 88
+  },
+  {
+    "name": "Anduril",
+    "creator": "Elven Smiths of Rivendell",
+    "origin": "Rivendell",
+    "tags": "sword,elven,reforged",
+    "year_created": 3019,
+    "power_level": 92
+  },
+  {
+    "name": "Palantír of Orthanc",
+    "creator": "Fëanor",
+    "origin": "Aman",
+    "tags": "seeing-stone,magic,ancient",
+    "year_created": -5000,
+    "power_level": 75
+  },
+  {
+    "name": "Glamdring",
+    "creator": "Elven Smiths",
+    "origin": "Gondolin",
+    "tags": "sword,elven,blue-glow",
+    "year_created": -1000,
+    "power_level": 80
+  },
+  {
+    "name": "Sting",
+    "creator": "Elven Smiths",
+    "origin": "Gondolin",
+    "tags": "dagger,elven,orc-glow",
+    "year_created": -900,
+    "power_level": 60
+  },
+  {
+    "name": "The Silmaril",
+    "creator": "Fëanor",
+    "origin": "Valinor",
+    "tags": "jewel,holy,legendary",
+    "year_created": -5900,
+    "power_level": 150
+  },
+  {
+    "name": "Horn of Gondor",
+    "creator": "Unknown",
+    "origin": "Gondor",
+    "tags": "horn,royal",
+    "year_created": 2000,
+    "power_level": 30
+  },
+  {
+    "name": "The Arkenstone",
+    "creator": "Unknown",
+    "origin": "Erebor",
+    "tags": "jewel,dwarven,legendary",
+    "year_created": -2000,
+    "power_level": 70
+  },
+  {
+    "name": "Barrow-blade",
+    "creator": "Dúnedain",
+    "origin": "Cardolan",
+    "tags": "sword,enchanted,undead-slayer",
+    "year_created": 1000,
+    "power_level": 55
+  }
+]
