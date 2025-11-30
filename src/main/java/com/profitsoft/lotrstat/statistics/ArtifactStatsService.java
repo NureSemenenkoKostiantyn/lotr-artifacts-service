@@ -12,7 +12,11 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Locale;
 import java.util.Map;
-import java.util.concurrent.*;
+import java.util.concurrent.Callable;
+import java.util.concurrent.ExecutionException;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.Future;
 import java.util.stream.Stream;
 
 public class ArtifactStatsService {
@@ -41,54 +45,68 @@ public class ArtifactStatsService {
                     String rawValue = parser.getValueAsString();
 
                     if (rawValue == null || rawValue.isBlank()) {
-                        continue;
-                    }
+                            continue;
+                        }
 
                     if (!attribute.isMultiValued()) {
-                        result.merge(rawValue.trim(), 1L, Long::sum);
-                    } else {
-                        String[] values = rawValue.split(",");
+                            result.merge(rawValue.trim(), 1L, Long::sum);
+                        } else {
+                            String[] values = rawValue.split(",");
 
-                        for (String v : values) {
-                            String cleaned = v.trim();
-                            if (!cleaned.isEmpty()) {
-                                result.merge(cleaned, 1L, Long::sum);
+                            for (String v : values) {
+                                String cleaned = v.trim();
+                                if (!cleaned.isEmpty()) {
+                                    result.merge(cleaned, 1L, Long::sum);
+                                }
                             }
                         }
                     }
                 }
             }
-        }
-        return result;
-    }
-
-    public Map<String, Long> processAllFilesInFolder(Path folder, ArtifactAttribute attribute)
-            throws IOException, InterruptedException {
-
-        Map<String, Long> result = new HashMap<>();
-
-        if (!Files.isDirectory(folder)) {
-            throw new IllegalArgumentException("Not a directory: " + folder);
-        }
-
-        List<Path> jsonFiles;
-        try (Stream<Path> stream = Files.list(folder)) {
-            jsonFiles = stream
-                    .filter(Files::isRegularFile)
-                    .filter(p -> p.getFileName().toString()
-                            .toLowerCase(Locale.ROOT)
-                            .endsWith(".json"))
-                    .toList();
-        }
-
-        if (jsonFiles.isEmpty()) {
-            System.out.println("No JSON files in " + folder);
             return result;
         }
 
+        public Map<String, Long> processAllFilesInFolder(Path folder, ArtifactAttribute attribute)
+            throws IOException, InterruptedException {
+            return processWithExecutor(folder, attribute, Executors.newVirtualThreadPerTaskExecutor());
+        }
 
+        public Map<String, Long> processAllFilesInFolderWithThreadPool(
+                Path folder,
+                ArtifactAttribute attribute,
+        int threadCount
+    ) throws IOException, InterruptedException {
 
-        try (var executor = Executors.newVirtualThreadPerTaskExecutor()) {
+            if (threadCount < 1) {
+                throw new IllegalArgumentException("Thread count must be at least 1");
+            }
+
+            ExecutorService executorService = Executors.newFixedThreadPool(threadCount);
+            try {
+                return processWithExecutor(folder, attribute, executorService);
+            } finally {
+                executorService.shutdown();
+            }
+        }
+
+        private Map<String, Long> processWithExecutor(
+                Path folder,
+                ArtifactAttribute attribute,
+                ExecutorService executor
+    ) throws IOException, InterruptedException {
+
+            Map<String, Long> result = new HashMap<>();
+
+            if (!Files.isDirectory(folder)) {
+                throw new IllegalArgumentException("Not a directory: " + folder);
+            }
+
+            List<Path> jsonFiles = listJsonFiles(folder);
+
+            if (jsonFiles.isEmpty()) {
+                System.out.println("No JSON files in " + folder);
+                return result;
+            }
 
             List<Callable<Map<String, Long>>> tasks = jsonFiles.stream()
                     .map(path -> (Callable<Map<String, Long>>) () -> processSingleFile(path, attribute))
@@ -99,14 +117,23 @@ public class ArtifactStatsService {
             for (Future<Map<String, Long>> future : futures) {
                 try {
                     Map<String, Long> fileStats = future.get();
-                    fileStats.forEach((key, value) -> result.merge(key, value,  Long::sum));
+                    fileStats.forEach((key, value) -> result.merge(key, value, Long::sum));
                 } catch (ExecutionException e) {
                     System.err.println("Error processing file: " + e.getCause());
                 }
             }
 
+            return result;
         }
 
-        return result;
+        private List<Path> listJsonFiles(Path folder) throws IOException {
+            try (Stream<Path> stream = Files.list(folder)) {
+                return stream
+                        .filter(Files::isRegularFile)
+                        .filter(p -> p.getFileName().toString()
+                                .toLowerCase(Locale.ROOT)
+                                .endsWith(".json"))
+                        .toList();
+            }
+        }
     }
-}
