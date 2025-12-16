@@ -20,6 +20,8 @@ public class ArtifactStatsService {
 
     private final JsonFactory jsonFactory = new JsonFactory();
 
+    private static final String MULTI_VALUE_SEPARATOR = ",";
+
     public Map<String, Long> processSingleFile(Path file, ArtifactAttribute attribute) throws IOException {
         Map<String, Long> result = new HashMap<>();
 
@@ -47,7 +49,7 @@ public class ArtifactStatsService {
                     if (!attribute.isMultiValued()) {
                         result.merge(rawValue.trim(), 1L, Long::sum);
                     } else {
-                        String[] values = rawValue.split(",");
+                        String[] values = rawValue.split(MULTI_VALUE_SEPARATOR);
 
                         for (String v : values) {
                             String cleaned = v.trim();
